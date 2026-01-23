@@ -1,0 +1,50 @@
+{
+  "Lakers": {
+    "players": ["LeBron James", "Anthony Davis", "Austin Reaves"],
+    "points": 0
+  },
+  "Warriors": {
+    "players": ["Stephen Curry", "Klay Thompson", "Draymond Green"],
+    "points": 0
+  },
+  "Celtics": {
+    "players": ["Jayson Tatum", "Jaylen Brown", "Marcus Smart"],
+    "points": 0
+  },
+  "Bulls": {
+    "players": ["Zach LaVine", "DeMar DeRozan", "Nikola Vucevic"],
+    "points": 0
+  },
+  "Heat": {
+    "players": ["Jimmy Butler", "Bam Adebayo", "Tyler Herro"],
+    "points": 0
+  },
+  "Nets": {
+    "players": ["Kevin Durant", "Kyrie Irving", "Ben Simmons"],
+    "points": 0
+  },
+  "Knicks": {
+    "players": ["Julius Randle", "RJ Barrett", "Jalen Brunson"],
+    "points": 0
+  },
+  "Mavericks": {
+    "players": ["Luka Doncic", "Kyrie Irving", "Christian Wood"],
+    "points": 0
+  },
+  "76ers": {
+    "players": ["Joel Embiid", "James Harden", "Tyrese Maxey"],
+    "points": 0
+  },
+  "Suns": {
+    "players": ["Kevin Durant", "Devin Booker", "Bradley Beal"],
+    "points": 0
+  },
+  "Jazz": {
+    "players": ["Lauri Markkanen", "Jordan Clarkson", "Collin Sexton"],
+    "points": 0
+  },
+  "Clippers": {
+    "players": ["Paul George", "Kawhi Leonard", "Ivica Zubac"],
+    "points": 0
+  }
+}

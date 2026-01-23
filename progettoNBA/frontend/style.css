@@ -1,0 +1,182 @@
+/* Impostazioni globali */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9fafb 0%, #d1d5db 100%);
+  color: #1f2933;
+  padding: 32px 20px;
+}
+
+/* Titoli */
+h1 {
+  background: #000000;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.8px;
+
+  padding: 22px 16px;
+  margin: -32px -20px 32px -20px;
+}
+
+/* Link di navigazione */
+.nav-link {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #1f2933;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-link:hover {
+  color: #e53935;
+  transform: translateX(-2px);
+}
+
+/* LISTA MATCH (index) */
+#matches {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.match {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 26px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.match:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.match a {
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Squadre */
+.teams {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Punteggio */
+.score {
+  font-size: 26px;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Stato */
+.status {
+  text-align: right;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.live {
+  color: #e53935;
+  font-weight: 800;
+}
+
+.finished {
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+/* DETTAGLIO MATCH */
+#score {
+  max-width: 900px;
+  margin: 30px auto 0;
+  text-align: center;
+}
+
+.score-big {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+/* Contenitore eventi */
+#events {
+  max-width: 900px;
+  margin: 30px auto 0;
+  list-style: none;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 10px 24px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+#events li {
+  padding: 16px 4px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+#events li:last-child {
+  border-bottom: none;
+}
+
+.event-icon {
+  font-size: 22px;
+}
+
+/* CLASSIFICA */
+#standings {
+  max-width: 600px;
+  margin: 30px auto 0;
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#standings th {
+  background: #111827;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 16px;
+  text-align: left;
+}
+
+#standings td {
+  padding: 14px 16px;
+  font-size: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#standings tr:last-child td {
+  border-bottom: none;
+}
+
+#standings tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+#standings tr:hover {
+  background: #f3f4f6;
+}

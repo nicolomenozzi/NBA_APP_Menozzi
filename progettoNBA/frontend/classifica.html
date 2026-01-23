@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Classifica NBA</title>
+</head>
+<body>
+
+<h1>Classifica</h1>
+
+<!-- Link per tornare alla pagina principale -->
+<a href="index.html" class="nav-link">Torna alla home</a>
+
+<!-- Tabella della classifica -->
+<table id="standings"> <!-- inizio tabella -->
+    <tr>
+        <th>Squadra</th>
+        <th>Punti</th>
+    </tr>
+</table>
+
+<script>
+// Funzione per caricare la classifica dal server
+async function classifica() {
+    // Richiesta HTTP al server per ottenere i dati della classifica
+    const response = await fetch("/standings");
+    const data = await response.json();
+
+    const table = document.getElementById("standings");
+
+    // Aggiunge una riga per ogni squadra nella tabella
+    for (let i = 0; i < data.length; i++) {
+        const team = data[i];
+        const row = document.createElement("tr");
+
+        // Inserisce i dati della squadra e dei punti nella riga
+        row.innerHTML = "<td>" + team.team + "</td><td>" + team.points + "</td>";
+        table.appendChild(row);
+    }
+}
+
+// Esegue la funzione per caricare la classifica all'apertura della pagina
+classifica();
+</script>
+</body>
+</html>
