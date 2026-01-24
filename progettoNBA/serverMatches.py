@@ -36,11 +36,14 @@ def create_matches():
     global MATCHES
     MATCHES = []
 
-    # Selezioniamo squadre casuali, 2 per ogni partita
-    selected_teams = random.sample(
-        TEAMS,
-        min(len(TEAMS), NUM_MATCHES * 2)
-    )
+    # Selezionia squadre casuali, 2 per ogni partita
+    selected_teams = []
+    max_teams = min(len(TEAMS), NUM_MATCHES * 2)
+
+    while len(selected_teams) < max_teams:
+        team = random.choice(TEAMS)
+        if team not in selected_teams:
+            selected_teams.append(team)
 
     match_id = 1
     for i in range(0, len(selected_teams), 2):
