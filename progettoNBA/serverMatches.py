@@ -168,28 +168,28 @@ class MatchDetailHandler(tornado.web.RequestHandler):
 
 
 # Endpoint REST: classifica
-class StandingsHandler(tornado.web.RequestHandler):
+class ClassificaHandler(tornado.web.RequestHandler):
     async def get(self):
-        standings = []
+        classifica = []
 
         # Crea la lista della classifica
         for team in TEAMS_DICT:
-            standings.append({
+            classifica.append({
                 "team": team,
                 "points": TEAMS_DICT[team]["points"]
             })
 
         # Ordinamento manuale dei punti in ordine decrescente
-        for i in range(len(standings)):
-            for j in range(i + 1, len(standings)):
-                if standings[j]["points"] > standings[i]["points"]:
+        for i in range(len(classifica)):
+            for j in range(i + 1, len(classifica)):
+                if classifica[j]["points"] > classifica[i]["points"]:
                     # scambia le posizioni
-                    temp = standings[i]
-                    standings[i] = standings[j]
-                    standings[j] = temp
+                    temp = classifica[i]
+                    classifica[i] = classifica[j]
+                    classifica[j] = temp
 
         # Invia la classifica come JSON
-        self.write(json.dumps(standings)) #dati elaborati su js
+        self.write(json.dumps(classifica)) #dati elaborati su js
 
 
 # WebSocket per aggiornamenti live
