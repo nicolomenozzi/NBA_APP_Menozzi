@@ -145,7 +145,7 @@ class MatchListHandler(tornado.web.RequestHandler):
         self.write(json.dumps(MATCHES))
 
 
-# Endpoint REST: dettaglio singola partita
+# Dettaglio singola partita
 class MatchDetailHandler(tornado.web.RequestHandler):
     async def get(self, match_id):
         # Trasforma l'id ricevuto in numero intero
@@ -167,7 +167,7 @@ class MatchDetailHandler(tornado.web.RequestHandler):
             self.write({"error": "Match not found"})
 
 
-# Endpoint REST: classifica
+# Classifica
 class ClassificaHandler(tornado.web.RequestHandler):
     async def get(self):
         classifica = []
@@ -232,3 +232,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
