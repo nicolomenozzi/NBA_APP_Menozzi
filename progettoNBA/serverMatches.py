@@ -4,14 +4,10 @@ import asyncio
 import tornado.web
 import tornado.websocket
 
-# Numero massimo di partite simultanee
-NUM_MATCHES = 5
 
-# Durata di una partita (in secondi, simulazione)
+NUM_MATCHES = 5
 MATCH_DURATION = 48
 
-
-# Carichiamo il file con squadre e giocatori
 with open("Teams.json") as f:
     TEAMS_DICT = json.load(f)
 
@@ -235,4 +231,5 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
