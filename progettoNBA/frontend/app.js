@@ -1,4 +1,4 @@
-// Creiamo una connessione WebSocket verso il server
+// Crea una connessione WebSocket verso il server
 var socket = new WebSocket("ws://localhost:8888/ws");
 
 
@@ -110,3 +110,4 @@ function mostraDettaglioMatch(listaMatch) {
     // Inserisce gli eventi nella pagina
     listaEventi.innerHTML = eventiHTML;
 }
+
