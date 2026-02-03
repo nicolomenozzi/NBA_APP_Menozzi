@@ -1,7 +1,7 @@
 # Costruisce l'immagine
-docker build -t nba-server .
+docker build -t servermatches .
 
 # Avvia il container
-docker run -p 8888:8888 nba-server
+docker run -p 8888:8888 servermatches
 
 docker-compose up --build
