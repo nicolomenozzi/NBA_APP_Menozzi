@@ -27,7 +27,7 @@ CLIENTS = []
 
 
 # Crea un nuovo set di partite
-# Viene chiamata all'avvio e quando tutte le partite finiscono
+# Viene chiamata all'avvio quando tutte le partite finiscono
 def create_matches():
     global MATCHES
     MATCHES = []
@@ -65,16 +65,16 @@ def generate_event(match):
     team = match["home"] if is_home else match["away"]
     score_key = "home" if is_home else "away"
 
-    # Peschiamo un giocatore a caso dalla squadra
+    # Pesca un giocatore a caso dalla squadra
     player = random.choice(TEAMS_DICT[team]["players"])
 
     # Punti casuali (1, 2 o 3)
     points = random.choice([1, 2, 3])
 
-    # Aggiorniamo il punteggio
+    # Aggiorna il punteggio
     match["score"][score_key] += points
 
-    # Registriamo l'evento per il dettaglio partita
+    # Registra l'evento per il dettaglio partita
     match["events"].append({
         "time": match["time"],
         "team": team,
@@ -231,5 +231,6 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
 
